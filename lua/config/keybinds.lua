@@ -3,9 +3,11 @@ vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>o', ':update<CR> :source<CR>')
 vim.keymap.set('n', '<leader>w', ':write<CR>')
 vim.keymap.set('n', '<leader>q', ':quitall<CR>')
+vim.keymap.set('n', '<leader>fq', ':quitall!<CR>')
 vim.keymap.set('n', '<leader>e', ':Oil<CR>')
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>ch', ':noh<CR>')
+vim.keymap.set('n', '<leader>la', ':Lazy<CR>')
 
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -20,8 +22,6 @@ vim.keymap.set('n', '<leader>h', require("harpoon.ui").toggle_quick_menu)
 vim.keymap.set('n', '<leader>m', require("harpoon.mark").add_file)
 vim.keymap.set('n', '<leader>n', require("harpoon.ui").nav_next)
 vim.keymap.set('n', '<leader>p', require("harpoon.ui").nav_prev)
-
-local test = 3
 
 for i = 1, 9 do
   vim.keymap.set("n", "<leader>" .. i, function()
