@@ -15,3 +15,4 @@ vim.cmd("colorscheme kanagawa-wave")
 
 vim.cmd("highlight Normal guibg=#1F1F28")
 
+
